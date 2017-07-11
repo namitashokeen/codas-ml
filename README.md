@@ -60,3 +60,27 @@ In Jupyter notebook, type "Kernels" button, select the **conda:root** environmen
 import sys
 sys.version  #shift+enter to evaluate
 ```
+
+## Switch VM for the exercises involving GPU
+
+For the exercises involving TensorFlow, we are going to need VMs with GPUs. You are going to receive a separate unique IP address and password for the second VM.
+
+Login the same way as before, check out the repo in the new VM:
+
+```bash
+git clone https://github.com/ASvyatkovskiy/codas-ml
+cd codas-ml
+```
+
+set the default Python to 2.7:
+```bash
+export PATH="/anaconda/bin:$PATH"
+```
+add following line to the **.bashrc**
+
+And launch the Jupyter as:
+```bash
+jupyter notebook --no-browser --port=8889 --ip=127.0.0.1
+```
+
+Use the ssh-tunnel trick to view the notebook in the local web-browser.
