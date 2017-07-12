@@ -106,3 +106,6 @@ Use the port forwarding:
 ```bash
 ssh -N -f -L localhost:8890:10.0.0.20:6006 student@<unique ip address>
 ```
+
+Make sure to choose a different port from the one you used to forward the Jupyter process to.
+You can now access the TensorBoard at `localhost:8890`
