@@ -84,3 +84,25 @@ jupyter notebook --no-browser --port=8889 --ip=127.0.0.1
 ```
 
 Use the ssh-tunnel trick to view the notebook in the local web-browser.
+
+
+## How to launch TensorBoard
+
+During the exercises involving TensorFlow, we are going to frequently 
+use TensoBoard tool for debugging and visualization.
+
+When prompted, launch the tensorboard as (on the VM!):
+```bash
+python -m tensorflow.tensorboard --logdir=<path to log dir>
+```
+
+This will return an IP address and the port where the process will be running, for instance:
+```bash
+Starting TensorBoard b'41' on port 6006
+(You can navigate to http://10.0.0.20:6006)
+```
+
+Use the port forwarding:
+```bash
+ssh -N -f -L localhost:8890:10.0.0.20:6006 student@<unique ip address>
+```
